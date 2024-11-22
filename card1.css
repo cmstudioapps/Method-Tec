@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+header {
+  background: #ff0077;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  
+}
+
+header .voltar {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 80px 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #00ffcc;
+}
+
+pre {
+  background: #202020;
+  color: #00ff00;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 10px;
+}

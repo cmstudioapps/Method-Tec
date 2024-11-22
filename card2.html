@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://i.imgur.com/LrE4Td7.jpeg">
+  <title>Como Adicionar Imagem Personalizada na Prévia do Link</title>
+  <link rel="stylesheet" href="card2.css">
+  
+  <!-- Metatags para a Imagem Personalizada -->
+  <meta property="og:title" content="Como Adicionar Imagem Personalizada na Prévia do Link">
+  <meta property="og:description" content="Aprenda a adicionar uma imagem personalizada para a prévia ao compartilhar seu site em redes sociais e mensageiros.">
+  <meta property="og:image" content="caminho/para/imagem.jpg">
+  <meta property="og:image:alt" content="Imagem personalizada para prévia do link">
+  <meta property="og:url" content="https://www.seusite.com">
+  
+  <!-- Metatags para o Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como Adicionar Imagem Personalizada na Prévia do Link">
+  <meta name="twitter:description" content="Aprenda a adicionar uma imagem personalizada para a prévia ao compartilhar seu site em redes sociais e mensageiros.">
+  <meta name="twitter:image" content="caminho/para/imagem.jpg">
+</head>
+<body>
+  <header class="header">
+    <h1>Metatags que<br>melhoram seu site</h1>
+    <a href="home.html" class="voltar">← Voltar</a>
+  </header>
+
+  <main class="conteudo">
+    <section>
+      <h2>O que são as Metatags Open Graph e Twitter Cards?</h2>
+      <p>
+        As **metatags Open Graph** e **Twitter Cards** são usadas para personalizar a prévia de links compartilhados em redes sociais e mensageiros. Elas permitem definir a imagem, título e descrição que serão exibidos quando alguém compartilhar seu site.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a Passo para Adicionar a Imagem</h2>
+      <ol>
+        <li>
+          <strong>Escolha a Imagem:</strong>
+          A imagem deve ter um tamanho recomendado de **1200x630px**. Prepare a imagem que você quer que apareça na prévia ao compartilhar o link.
+        </li>
+        <li>
+          <strong>Adicione as Metatags ao HTML:</strong>
+          Dentro da tag `<head>` do seu arquivo HTML, adicione as seguintes metatags:
+          <pre>
+&lt;meta property="og:title" content="Título do seu site"&gt;
+&lt;meta property="og:description" content="Descrição do seu site"&gt;
+&lt;meta property="og:image" content="caminho/para/imagem.jpg"&gt;
+&lt;meta property="og:image:alt" content="Descrição da imagem"&gt;
+&lt;meta property="og:url" content="https://www.seusite.com"&gt;
+
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Título do seu site"&gt;
+&lt;meta name="twitter:description" content="Descrição do seu site"&gt;
+&lt;meta name="twitter:image" content="caminho/para/imagem.jpg"&gt;
+          </pre>
+        </li>
+        
+      </ol>
+    </section>
+
+    <section>
+      <h2>Benefícios das Metatags</h2>
+      <ul>
+        <li>Melhora a aparência do seu link quando compartilhado.</li>
+        <li>Aumenta a taxa de cliques (CTR) em posts e links.</li>
+        <li>Permite controle total sobre o conteúdo da prévia.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

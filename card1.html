@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://i.imgur.com/LrE4Td7.jpeg">
+  <title>Como Criar um App com PWA</title>
+  <link rel="stylesheet" href="card1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Como Criar um App do Site com PWA</h1>
+    <a href="home.html" class="voltar">← Voltar</a>
+  </header>
+
+  <main class="conteudo">
+    <section>
+      <h2>O que é um PWA?</h2>
+      <p>
+        Um **Progressive Web App (PWA)** é uma tecnologia que permite transformar sites em apps instaláveis 
+        no celular ou computador. Ele funciona como um app nativo, mas sem precisar de lojas como Google Play ou App Store.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a Passo para Criar um PWA</h2>
+      <ol>
+        <li>
+          <strong>Crie um arquivo manifest.json:</strong>
+          Esse arquivo informa ao navegador os detalhes do app. Exemplo:
+          <pre>
+{
+  "name": "Method-Tec",
+  "short_name": "Method-Tec",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#ff0077",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+          </pre>
+        </li>
+
+        <li>
+          <strong>Adicione o manifest.json no HTML:</strong>
+          Inclua a seguinte linha dentro da tag `<head>`:
+         <pre>
+&lt;link rel="manifest" href="manifest.json"&gt;
+</pre>
+        </li>
+
+        <li>
+          <strong>Implemente um Service Worker:</strong>
+          Um Service Worker é um script que permite o funcionamento offline. Crie um arquivo chamado `sw.js`:
+          <pre>
+self.addEventListener('install', (event) => {
+  console.log('Service Worker Instalado');
+  event.waitUntil(
+    caches.open('method-tec-cache').then((cache) => {
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/style.css',
+        '/logo192.png'
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
+});
+          </pre>
+        </li>
+
+        <li>
+          <strong>Registre o Service Worker no JavaScript:</strong>
+          No arquivo `main.js` ou em um script do site, adicione:
+          <pre>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(() => {
+    console.log('Service Worker Registrado!');
+  });
+}
+          </pre>
+        </li>
+
+        <li>
+          <strong>Teste o PWA:</strong>
+          Abra o site no navegador, e:
+          <ul>
+            <li>No Chrome, vá em <em>Configurações &gt; Instalar App</em>.</li>
+            <li>Ou no celular, veja o botão <em>Adicionar à tela inicial</em>.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Exemplo ao Vivo</h2>
+      <p>
+        <strong>1. Abra o site:</strong> Visite o Method-Tec no navegador.<br>
+        <strong>2. Clique no botão:</strong> Escolha "Adicionar à Tela Inicial" ou "Instalar App".<br>
+        <strong>3. Aproveite:</strong> O site agora está instalado como um app!
+      </p>
+    </section>
+
+    <section>
+      <h2>Benefícios do PWA</h2>
+      <ul>
+        <li>Funciona offline.</li>
+        <li>Carregamento rápido.</li>
+        <li>Não depende de lojas de apps.</li>
+        <li>Fácil instalação e desinstalação.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

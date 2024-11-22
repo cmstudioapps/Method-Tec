@@ -1,0 +1,66 @@
+/* Tela de Carregamento */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+.loading-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 150px; /* Ajuste o tamanho da logo */
+  animation: pulse 2s infinite;
+}
+
+.loading-text {
+  color: #00ffcc;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.spinner {
+  margin-top: 15px;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #00ffcc;
+  border-top: 5px solid #ff0077;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animações */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carregando - Method-Tec</title>
+  <link rel="stylesheet" href="loading.css">
+  <meta property="og:image" content="https://i.imgur.com/LrE4Td7.jpeg">
+</head>
+<body>
+  <!-- Tela de carregamento -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="https://i.imgur.com/LrE4Td7.jpeg" alt="Method-Tec Logo" class="logo">
+    <div class="loading-text">Carregando...</div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Conteúdo principal (oculto durante o carregamento) -->
+  <div id="conteudo" style="display: none;">
+    <!-- Aqui você pode adicionar o conteúdo do site -->
+  </div>
+
+  <script>
+    // Simula um carregamento e exibe o conteúdo após 3 segundos
+window.addEventListener('load', () => {
+  
+
+  setTimeout(() => {
+    
+    window.location.href = "home.html"
+    
+},3000);
+
+})
+    
+    
+    
+  </script>
+</body>
+</html>
