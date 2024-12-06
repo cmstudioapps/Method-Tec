@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method-Tec - Redirecionamento</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ff69b4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ff69b4;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .code-block {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #ff69b4;
+        }
+
+        a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1f1f1f;
+            padding: 10px;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Method-Tec - Redirecionamento por URL</h1>
+    </header>
+
+    <div class="content">
+        <h2>O que é redirecionar para um elemento?</h2>
+        <p>Redirecionar o usuário para um elemento específico em uma página HTML significa levá-lo diretamente para uma seção ou conteúdo dentro dessa página. Isso é feito usando identificadores (<code>id</code>) e a URL com uma hash (<code>#</code>).</p>
+
+        <h3>Exemplo Prático</h3>
+        <p>Considere o seguinte código HTML:</p>
+
+        <div class="code-block">
+            <code>
+                &lt;div id="card2"&gt;
+                    &lt;h2&gt;Card do Segundo Método&lt;/h2&gt;
+                    &lt;p&gt;Conteúdo do segundo método.&lt;/p&gt;
+                &lt;/div&gt;
+            </code>
+        </div>
+
+        <p>Para redirecionar o usuário diretamente para esse elemento, basta usar uma URL como esta:</p>
+
+        <div class="code-block">
+            <code>
+                https://method-tec.vercel.app/home.html#card2
+            </code>
+        </div>
+
+        <h3>Passo a Passo</h3>
+        <ol>
+            <li>Adicione o atributo <code>id</code> ao elemento que você deseja redirecionar. No exemplo, o <code>id</code> é <code>card2</code>.</li>
+            <li>Inclua o <code>#id</code> ao final da URL da página, como em <code>#card2</code>.</li>
+            <li>Compartilhe a URL com o usuário.</li>
+        </ol>
+
+        <h3>Teste</h3>
+        <p>Experimente redirecionar para o elemento abaixo adicionando <code>#example</code> na URL:</p>
+
+        <div id="example" style="margin-top: 50px; padding: 10px; background: #333; border-radius: 5px;">
+            <h3>Elemento de Teste</h3>
+            <p>Se você chegou aqui, o redirecionamento funcionou!</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Method-Tec. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
